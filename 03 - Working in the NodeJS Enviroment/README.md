@@ -22,18 +22,31 @@ Now I will run through some things that we will be using in NodeJS. If you are u
 let myFunc = function() {
     // Do something here
 }
+
+// A function that gets passed another function (See First Class Functions below)
+let funcThatNeedsFunc = function(text, paramFunc) {
+    if(someConditionIsMet) {
+        // Call paramFunc
+        let capText = String(text).toUpperCase();
+        paramFunc(capText);
+    }
+}
+
+funcThatNeedsFunc("some text", function(transformedText) {
+    console.log(transformedText);
+}
 ```
 
 #### First Class Functions
 
 ``` 
 let fullNameFunc = function(firstName, lastName) {
-let fullName = firstName + ' ' +   lastName;
-return fullName;
+    let fullName = firstName + ' ' +   lastName;
+    return fullName;
 }
 
 let printName = function (nameToPrint) {
-console.log(nameToPrint);
+    console.log(nameToPrint);
 }
 
 printName(fullNameFunc('John', 'Smith'));
@@ -107,7 +120,7 @@ longPromisedCheck("Johnny is my name").then((newStringData) => {
 })
 ```
 
-If any of these gave you pause, feel free to check out the associated video to clear it up!
+If any of these gave you pause, please do make an effort to learn them first before moving on.
 
 ## Next Lesson 
 
