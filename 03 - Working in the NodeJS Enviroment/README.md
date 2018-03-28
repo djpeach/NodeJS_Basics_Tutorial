@@ -15,7 +15,7 @@ Now we can run our _index.js_ file by going to our root directory (*node_program
 
 ## NodeJS Prerequisites
 
-Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I have done tutorials on each of them as well, so go check those out before moving on.
+Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I reccommend finding tutorials explainign them in depth before moving on. Well anyway, here we go!
 
 #### Anonymous Functions
 ```
