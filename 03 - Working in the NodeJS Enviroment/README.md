@@ -15,12 +15,25 @@ Now we can run our _index.js_ file by going to our root directory (*node_program
 
 ## NodeJS Prerequisites
 
-Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I have done tutorials on each of them as well, so go check those out before moving on.
+Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I recommend finding tutorials explaining them in depth before moving on. Well anyway, here we go!
 
 #### Anonymous Functions
 ```
 let myFunc = function() {
     // Do something here
+}
+
+// A function that gets passed another function (See First Class Functions below)
+let funcThatNeedsFunc = function(text, paramFunc) {
+    if(someConditionIsMet) {
+        // Call paramFunc
+        let capText = String(text).toUpperCase();
+        paramFunc(capText);
+    }
+}
+
+funcThatNeedsFunc("some text", function(transformedText) {
+    console.log(transformedText);
 }
 ```
 
@@ -28,12 +41,12 @@ let myFunc = function() {
 
 ``` 
 let fullNameFunc = function(firstName, lastName) {
-let fullName = firstName + ' ' +   lastName;
-return fullName;
+    let fullName = firstName + ' ' +   lastName;
+    return fullName;
 }
 
 let printName = function (nameToPrint) {
-console.log(nameToPrint);
+    console.log(nameToPrint);
 }
 
 printName(fullNameFunc('John', 'Smith'));
@@ -107,7 +120,7 @@ longPromisedCheck("Johnny is my name").then((newStringData) => {
 })
 ```
 
-If any of these gave you pause, feel free to check out the associated video to clear it up!
+If any of these gave you pause, please do make an effort to learn them first before moving on.
 
 ## Next Lesson 
 
