@@ -7,7 +7,6 @@ to create my own tutorials to present it in a unique light that may help other n
 
 Video Series on Youtube can be found here: *coming soon*
 
-These files are not meant to be a tutorial in and of themselves, only a supplement to the youtube tutorials
-I have been doing, so if you have any questions, check out the relavant video and see if you don't find the answer there.
+I hope you enjoy these tutorials. If you have questions on a tutorial, check out the corresponding video version! (_coming soon_)
 
 Thanks Everyone, and Happy Coding!
