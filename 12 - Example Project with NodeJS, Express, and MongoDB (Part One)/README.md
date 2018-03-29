@@ -132,4 +132,4 @@ We have got our UI setup and now that we know where everything goes, we can star
 
 ## Next Lesson 
 
-In the next lesson, we will configure our database to hold posts, and set
+In the next lesson, we will configure our database to hold posts. We will add the database connection, and build our Post Schema.
