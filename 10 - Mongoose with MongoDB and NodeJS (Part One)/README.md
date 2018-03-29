@@ -1,4 +1,4 @@
-Lesson 10 - Mongoose with MongoDB and NodeJS
+Lesson 10 - Mongoose with MongoDB and NodeJS (Part One)
 
 ## Setup
 
@@ -26,7 +26,7 @@ const mongoose = require('mongoose');
 
 Then right after that, we can make our connection to the database. We will make the connection, then use that connection to set error reporting, and also we will set the Promise type that mongoose gives us to our native Promises. There are other libraries that you can use such as `bluebird` and `q`, but we will just use `global.Promise`'s for now.
 
-So first, make the connection:
+So first, make the connection (notice that we define the database name at the end of the url):
 ```
 mongoose.connect('mongodb://localhost/mongoose-demo');
 ```
@@ -68,7 +68,7 @@ Now we will use that Schema variable to create a JSON-style object to represent 
 let UserSchema = new Schema({
     firstName:          { type: String, required: true },
     lastName:           { type: String, required: true },
-    username:           { type: String, required: true, unique: true },
+    userName:           { type: String, required: true, unique: true },
     email:              { type: String, required: true, unique: true  },
     password:           { type: String, required: true}
 });
