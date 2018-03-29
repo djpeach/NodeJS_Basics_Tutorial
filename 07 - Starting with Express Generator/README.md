@@ -1,4 +1,4 @@
-# Lesson 07 - Using Express Generator with NodeJS
+# Lesson 07 - Using Express Generator with NodeJS - Part One
 
 ## What is Express-Generator
 
