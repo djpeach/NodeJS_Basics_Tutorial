@@ -150,3 +150,9 @@ router.delete('/removeUser', (req, res) => {
 });
 ```
 
+**Make sure to test all your routes with PostMan. See the instructions at the top if you need help using PostMan**
+
+## Next Lesson
+
+In the next lesson, we will be beginning our final project! It will be an app called StatusOfYou. You will be able to post status updates, edit them, and delete them all on your own mini-blog! See you there!
+
