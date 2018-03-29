@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col.text-center
+        .jumbotron.bg-gray
+          h1.text-primary Status Of You
+          p.lead Here is where I post anything I like!
+        button(class="btn btn-primary" type="button" data-toggle="collapse" data-target="#formSection") Add a New Post
+        #formSection.collapse.mt-2
+          .card.bg-gray.card-body
+            form(action='/' method='POST')
+              .form-group
+                .row
+                  .col-2.text-right
+                    label.mt-2(for='title') Title:
+                  .col-8 
+                    input.form-control(id='title' name='title' placeholder='An instersting title...')
+              .form-group
+                .row
+                  .col-2.text-right
+                    label.mt-2(for='message') Message:
+                  .col-8 
+                    textarea.form-control(id='message' name='message' placeholder='What do you have to say?' rows='5')
+              .form-group
+                .row
+                  .col
+                      button.btn.btn-success(type='submit' data-toggle='collapse' data-target='#formSection') Create Post
+    .row.mt-3
+      .col-11
+        .card
+          .card-header
+            h5.card-title An Awesome Title
+          .card-body
+            p.card-text This is a very interesting post about...
+      .col-1
+        form(action='/editPost').mt-2
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-primary(type='submit') Edit
+        form(action='/' method='DELETE').mt-3
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-danger(type='submit') Delete
+    .row.mt-3
+      .col-11
+        .card
+          .card-header
+            h5.card-title An Awesome Title
+          .card-body
+            p.card-text This is a very interesting post about...
+      .col-1
+        form(action='/editPost').mt-2
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-primary(type='submit') Edit
+        form(action='/' method='DELETE').mt-3
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-danger(type='submit') Delete
+    .row.mt-3
+      .col-11
+        .card
+          .card-header
+            h5.card-title An Awesome Title
+          .card-body
+            p.card-text This is a very interesting post about...
+      .col-1
+        form(action='/editPost').mt-2
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-primary(type='submit') Edit
+        form(action='/' method='DELETE').mt-3
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-danger(type='submit') Delete
+    .row.mt-3
+      .col-11
+        .card
+          .card-header
+            h5.card-title An Awesome Title
+          .card-body
+            p.card-text This is a very interesting post about...
+      .col-1
+        form(action='/editPost').mt-2
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-primary(type='submit') Edit
+        form(action='/' method='DELETE').mt-3
+          input(type='hidden' name='post_id' value=post_id)
+          button.btn.btn-outline-danger(type='submit') Delete
