@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col.text-center
+        .jumbotron.bg-gray
+          h1.text-primary Status Of You
+          p.lead Here is where I post anything I like!
+        if error
+          h3.text-danger= error
+        button(class="btn btn-primary" type="button" data-toggle="collapse" data-target="#formSection") Add a New Post
+        #formSection.collapse.mt-2
+          .card.bg-gray.card-body
+            form(action='/' method='POST')
+              .form-group
+                .row
+                  .col-2.text-right
+                    label.mt-2(for='title') Title:
+                  .col-8 
+                    input.form-control(id='title' name='title' placeholder='An instersting title...')
+              .form-group
+                .row
+                  .col-2.text-right
+                    label.mt-2(for='message') Message:
+                  .col-8 
+                    textarea.form-control(id='message' name='message' placeholder='What do you have to say?' rows='5')
+              .form-group
+                .row
+                  .col
+                      button.btn.btn-success(type='submit' data-toggle='collapse' data-target='#formSection') Create Post
+    for post in posts
+      .row.mt-3
+        .col-11
+          .card
+            if postForm && postForm.postTitle == post.title
+              form.mt-2(action='/editPost' method="POST")
+                input(type='hidden' name='post_id' value=post._id)
+                .form-group
+                  .row
+                    .col-2.text-right
+                      label.mt-2(for='editedTitle') Edit Title: 
+                    .col-8
+                      input.form-control(id='editedTitle' name='editedTitle' value=post.title)
+                .form-group
+                  .row
+                    .col-2.text-right
+                      label.mt-2(for='editedMessage') Edit Message:
+                    .col-8
+                      textarea.form-control(id='editedMessage' name='editedMessage' rows='5')= post.message
+                .form-group
+                  .row
+                    .col.text-right.mr-5
+                      button.btn.btn-success.btn-sm(type="submit") Update Post
+            else
+              .card-header
+                h5.card-title= post.title
+              .card-body
+                p.card-text= post.message
+        .col-1
+          form(action='/editPost').mt-2
+            input(type='hidden' name='post_id' value=post._id)
+            button.btn.btn-outline-primary(type='submit') Edit
+          form(action='/deletePost' method='POST').mt-3
+            input(type='hidden' name='post_id' value=post._id)
+            button.btn.btn-outline-danger(type='submit') Delete
