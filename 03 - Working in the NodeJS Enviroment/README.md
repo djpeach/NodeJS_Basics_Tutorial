@@ -4,20 +4,20 @@
 
 Go ahead and create a new folder for this lesson and call it something like _node_programming_. Now do the same as last lesson and go to this folder in terminal and run `npm init --yes`.
 
-Let's go into `package.json` and create a run script. Right after the script line for test, add `"start": "node index.js"`. This creates the start script we will use to run our project. Now we need to create that `index.js` we just specified for node to look for. Go ahead and create a file and call it `index.js`, open this in a text editor, and let's get started.
+Let's go into `package.json` and create a run script. Right after the script line for test, add `"start": "node index.js"`. This creates the start script we will use to run our project. Next we need to create the *index.js* file we just told Node to look for when we run "start". Go ahead and create a file and call it *index.js*, open this in a text editor, and let's get started.
 
 Start by typing in a simple command to print out 'Hello World!' in the honor of tradition: 
 ```
 console.log('Hello World!');
 ```
 
-Now we can run our _index.js_ file by going to our root directory (*node_programming/*) in terminal and running `npm run start`. You should see NodeJS find the file, and execute it, and then see the output: `Hello World!`. This is how we write and run files with NodeJS. 
+Now we can run our _index.js_ file by going to our root working directory (*node_programming/*) in terminal and running `npm run start`. You should see NodeJS find the file, and execute it, and then see the output: `Hello World!`. This is how we write and run files with NodeJS. 
 
 ## NodeJS Prerequisites
 
-Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I recommend finding tutorials explaining them in depth before moving on. Well anyway, here we go!
+Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I recommend finding tutorials explaining them in depth before moving on. Alright, here we go!
 
-#### Anonymous Functions
+#### Anonymous Functions & Function Expressions
 ```
 let myFunc = function() {
     // Do something here
@@ -124,7 +124,7 @@ If any of these gave you pause, please do make an effort to learn them first bef
 
 ## Next Lesson 
 
-In the next lesson we will be creating our first NodeJS server, and you will see how to handle and respond to http requests with Node. See you there!
+In the next lesson we will be creating our first NodeJS server, and you will see how to handle and respond to HTTP requests with Node. See you there!
 
 
 

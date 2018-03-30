@@ -17,7 +17,7 @@ Now we can use that to go ahead and run our app to test everything was set up co
 
 ## Adding our Database
 
-To add the database we need two things: A database instance up and running on a port, and a connection to that database and port in our code. This is what hooks our app into the database. In order to do this, we first need to get our database running. If you remember from the last lesson, we just open a new terminal and run `mongod`. This should start up your database and inform you of the port it is running on. (Most likely default port 27017)
+To add the database we need two things: A database instance up and running on a port, and a connection to that database in our code. This is what hooks our app into the database. In order to do this, we first need to get our database running. If you remember from the last lesson, we just open a new terminal and run `mongod`. This should start up your database and inform you of the port it is running on. (Most likely default port 27017)
 
 Now in our code, we will add a connection to our running database, so we can use it within our app. Go to the brains of our app, *app.js*, and import the mongoose modules.
 ```
@@ -63,7 +63,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 ```
 
-Now we will use that Schema variable to create a JSON-style object to represent a user. We will define expected fields in key: value pairs, with the value being a set of options for each key.
+Now we will use that Schema variable to create a JSON-style object to represent a user. We will define expected fields in **key: value** pairs, with the value being a set of options for each key.
 ```
 let UserSchema = new Schema({
     firstName:          { type: String, required: true },
@@ -74,16 +74,16 @@ let UserSchema = new Schema({
 });
 ```
 
-Here we have defined every field in our user model to be a string, and be required. Also, the usernames and emails must be distinct from each other. If they are not we will get an error when we try to save it to the database.
+Here we have defined every field in our user model to be a string, and be required. Also, the usernames and emails must be distinct from every other username and email. If they are not we will get an error when we try to save it to the database.
 
-Now at the end of the file, we will export this user_schema using `mongoose.model` to specify the collection and Schema to use. We will set this to a 'User' viable so we can do some more with this object in a second.
+Now at the end of the file, we will export this **UserSchema** using `mongoose.model` to specify the collection and Schema to use. We will set this to a 'User' viable so we can do some more with this object in a second.
 ```
 let User = module.exports = mongoose.model('User', UserSchema);
 ```
 
 #### More with Schema 
 
-Along with basic fields we can define 'virtual fields' that don't exist in the database, but we can access as if they belong to the object by doing some calculation or manipulation with the fields that do exist in the database. Lets use this to define a 'fullname' variable on our 'User'.
+Along with basic fields we can define 'virtual fields' that don't exist in the database, but we can access as if they belong to the object by doing some calculation or manipulation with the fields that do exist in the database. Lets use this to define a **fullname** variable on our **User**.
 ```
 UserSchema.virtual('fullName').get( function() {return `${this.firstName} ${this.lastName}`});
 ```
@@ -106,6 +106,10 @@ UserSchema.methods.comparePassword = (passwordToCompare) => {
 }
 ```
 
+## Summary
+
+In this lesson, we learned how to connect our app to a MongoDB, as well as how to define a Schema/Model for our objects in the app. All that is missing is routes to do operations on the database.
+
 ## Next Lesson
 
-In the next lesson, we will see how to use CRUD (Create, Read, Update, Destroy) operation with our app on real user objects. See you there!
+In the next lesson, we will see how to create routes to perform CRUD (Create, Read, Update, Destroy) operations with our app on real user objects. See you there!

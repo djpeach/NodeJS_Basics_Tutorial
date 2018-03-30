@@ -10,16 +10,16 @@ Let's get setup like we always do.
 * `npm init --yes`    - Initialize Node
 * `touch index.js`    - Create index.js
 * `code .`            - Open the project in a text editor(for me `code` opens VSCode)
-* In `package.json`'s scripts: `"start": "node index.js"`   - Start script for the server.
+* In *package.json*'s scripts: `"start": "node index.js"`   - Start script for the server.
 
 ## Build the Server
 
-Now it is time to build the server. Let's start by importing the http module for node. This module will allow us to accept and handle http requests from the server and send a response back to it, as well as letting us create the server itself.
+Now it is time to build the server. Let's start by importing the http module for Node. This module will allow us to accept and handle http requests from the server and send a response back to it, as well as letting us create the server itself.
 ```
 const http = require('http');
 ```
 
-Next we will use that http variable to create the server. `http.createServer()` takes a function to execute on every request. We will pass that in and define it in a second. For now just add this below the http import.
+Next we will use that http variable to create the server. `http.createServer()` takes a function to execute on every request. We will pass that function in and define it in a second. For now just add this below the http import.
 ```
 const server = http.createServer(doThisOnRequest);
 ```
@@ -40,12 +40,12 @@ server.listen(3000, '127.0.0.1', () => {
 });
 ```
 
-Now lets go to our terminal and run `npm run start`. 
+Now lets go to our terminal, and in the working directory (*node_server*) we will run `npm run start`. 
 
 Now we can open our browser and go to http://localhost:3000/ to see the site. 
 
-Notice that the page gets stuck loading. Why is this? We will talk about that in the next lesson. See you there!
+Notice that the page gets stuck loading. Why is this? Well we will talk about that in the next lesson. 
 
 ## Next Lesson
 
-In the next lesson we will talk about the request and response and how we use them to control the server routing.
+In the next lesson we will talk about the request and response and how we use them to control the server routing. See you there!
