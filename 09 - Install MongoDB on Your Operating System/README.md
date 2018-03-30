@@ -4,7 +4,7 @@
 
 > MongoDB is a noSQL document-driven database that scales and queries quickly and easily.
 
-The great thing about MongoDB is the noSQL, document-driven aspect of it. noSQL means that it does not use SQL to function or program with. It uses common programming syntaxes, and can use drivers to be used with many languages. With NodeJS, we will be using the Mongoose Driver which will enable us to define and use MongoDB documents just like normal JavaScript JSON objects.
+The great thing about MongoDB is the noSQL, document-driven aspect of it. noSQL means that it does not use SQL to function or program with. It uses common programming syntaxes, and can use drivers to be used with many languages. With NodeJS, we will be using the Mongoose Driver, which will enable us to define and use MongoDB documents just like normal JavaScript JSON objects.
 
 ## Install and Setup
 
