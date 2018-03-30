@@ -13,11 +13,11 @@ Last lesson we set up quite a bit of UI, and remember how we said that this is a
 > * **`GET` request on `/editPost`** - This means that the user has requested to edit a certain post. We will re-render the index page to them still, but this time, the post they wanted to edit will be replaced by a pre-populated form, and they can change whatever they need to and submit it on a 'PUT' request to the '/' path.We should expect incoming data to be:
   >   * req.body.post_id
 
-> * **`PUT` request on `/`** - This means the user has submitted a form to update an existing post after editing it. We will get the following data.
+> * **`POST` request on `/editPost`** - This means the user has submitted a form to update an existing post after editing it. We will get the following data.
   >     * req.body.updatedTitle - The new title the user is submitting to be edited.
   >     * req.body.updatedMessage - The new message body the user wants the post to say.
 
-> * **`DELETE` request on `/`** - This means the user has submitted a request to delete a certain post. We should expect incoming data to be:
+> * **`POST` request on `/deletePost`** - This means the user has submitted a request to delete a certain post. We should expect incoming data to be:
   >   * req.body.post_id
 
 ## Connect to Database & Define Schema
