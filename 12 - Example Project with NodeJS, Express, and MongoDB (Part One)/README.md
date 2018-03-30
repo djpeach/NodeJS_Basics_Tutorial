@@ -105,25 +105,25 @@ Now we will add the form. We will give the form an 'action' of '/' and a method 
 
 Now we will just add a couple dummy posts below this to demonstrate what it will look like. Make sure to put the `.row`'s on the same indentation level as the last one. Make two or three of these: 
 ```
-    .row.mt-3
-      .col-11
-        .card
-          .card-header
-            h5.card-title An Awesome Title
-          .card-body
-            p.card-text This is a very interesting post about...
-      .col-1
-        form(action='/editPost').mt-2
-          input(type='hidden' name='post_id' value=post_id)
-          button.btn.btn-outline-primary(type='submit') Edit
-        form(action='/' method='DELETE').mt-3
-          input(type='hidden' name='post_id' value=post_id)
-          button.btn.btn-outline-danger(type='submit') Delete
+.row.mt-3
+  .col-11
+    .card
+      .card-header
+        h5.card-title An Awesome Title
+      .card-body
+        p.card-text This is a very interesting post about...
+  .col-1
+    form(action='/editPost').mt-2
+      input(type='hidden' name='post_id' value=post._id)
+      button.btn.btn-outline-primary(type='submit') Edit
+    form(action='/deletePost' method='POST').mt-3
+      input(type='hidden' name='post_id' value=post._id)
+      button.btn.btn-outline-danger(type='submit') Delete
 ```
 
 Notice a couple things. First, we have two forms on the right side of the post, each with a hidden input and a submit button. The first, 'Edit' has a action and no method, so it will default to a 'GET' request. So we know when a user has sent a 'GET' request to the '/editPost' route, they want to edit their post. And we know when the when the use sends a 'DELETE' request to the '/' route, they want to delete a post.
 
-Second, we have the value of the hidden inputs set to 'post_id'. Where do we get this? Well we will pass this in when we render the page server side. 
+Second, we have the value of the hidden inputs set to 'post._id'. Where do we get this? Well we will pass this in when we render the page server side. 
 
 
 ## Summary
