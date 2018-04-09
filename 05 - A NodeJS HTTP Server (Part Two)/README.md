@@ -1,10 +1,10 @@
-# Lesson 04 - A NodeJS HTTP Server
+# Lesson 05 - A NodeJS HTTP Server (Part Two)
 
 Previously, we set up and ran our server, but when we sent our first request to the server to load the page, we got stuck loading. To understand why this happens we need to understand the **request - response cycle** that occurs when the user interacts with the server.
 
 ## The Request and Response
 
-You will notice in our request handler(`doThisOnRequest()`), that we pass in a **request** and a **response**. What are these? 
+You will notice in our request handler(`doThisOnRequest()`), that we pass in a **request** and a **response**. What are these?
 
 Well **request** is what we are getting from the server. It is the user's request to get or send something from or to the server. It contains information like the url, the request method, the body of the request (data sent to the server), and more info about the request itself.
 
@@ -22,9 +22,9 @@ Now restart the server: `^C` to end the server (if you had it running from the l
 
 It seems a waste of time to have to stop and re-start our server everytime we make a slight change to our files. So can we fix this? With the power of npm, absolutely!
 
-Nodemon is a npm package that monitors your files, and if it notices you save any new changes, will restart your server for you. You can also restart it manually still with `rs`. So lets install it. Go to your terminal and run `npm install nodemon --save`. 
+Nodemon is a npm package that monitors your files, and if it notices you save any new changes, will restart your server for you. You can also restart it manually still with `rs`. So lets install it. Go to your terminal and run `npm install nodemon --save`.
 
-Once that installs, in order to use it, let's go modify our scripts in *package.json*. After our start script, add a new **devstart** script. `"devstart": "nodemon index.js"`. Now stop the server, and run `npm run devstart`. From now on, nodemon will restart our server for us anytime we save changes! 
+Once that installs, in order to use it, let's go modify our scripts in *package.json*. After our start script, add a new **devstart** script. `"devstart": "nodemon index.js"`. Now stop the server, and run `npm run devstart`. From now on, nodemon will restart our server for us anytime we save changes!
 
 Alright back to request and response.
 
@@ -34,7 +34,7 @@ The request is full of all sorts of neat stuff, but what we are interested in is
 ```
 if(request.method == 'GET' && request.url == '/') {
     serveHomePage(response);
-} 
+}
 ```
 
 Here we call `serveHomePage()` and pass in our response when the user sends us a `GET` request on the url of `'/'`. Let's define what we will do in this Home Page handler. We will do this with the response object we pass to it.
@@ -51,7 +51,7 @@ let serveHomePage = (response) => {
 }
 ```
 
-Here we send the user a couple bits of html in the form of a `<h1>` element and a `<a>` link to another page. Notice the href in this `<a>` link. Remember the default method is already `GET`. When the user clicks this link, they will be making a new request on the `'/nextpage'` url with the default `GET` method. 
+Here we send the user a couple bits of html in the form of a `<h1>` element and a `<a>` link to another page. Notice the href in this `<a>` link. Remember the default method is already `GET`. When the user clicks this link, they will be making a new request on the `'/nextpage'` url with the default `GET` method.
 
 ## Serving other pages
 
@@ -92,13 +92,11 @@ let send404Error = (response) => {
 }
 ```
 
-Now try going to http://localhost:3000/randomPage. You will get sent the 404 Error. 
+Now try going to http://localhost:3000/randomPage. You will get sent the 404 Error.
 
 ## Summary
 
-Congratualations! You have just created your first NodeJS server! Now feel free to configure as many requests and responses that your heart desires and see your server get as big as your want. However, soon you will get tired of manually setting each route and writing each response. There are better ways to handle this, but the best way is to not use Node just by itself. This is what we will talk about next lesson. 
+Congratualations! You have just created your first NodeJS server! Now feel free to configure as many requests and responses that your heart desires and see your server get as big as your want. However, soon you will get tired of manually setting each route and writing each response. There are better ways to handle this, but the best way is to not use Node just by itself. This is what we will talk about next lesson.
 
-## Next Lesson 
+## Next Lesson
 In the next lesson, we will be learning how to combine NodeJS with Express, an extremely popular and powerful npm package to help build our web apps. See you there!
-
-

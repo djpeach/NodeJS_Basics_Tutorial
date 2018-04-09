@@ -17,7 +17,7 @@ Now we can run our _index.js_ file by going to our root working directory (*node
 
 Now I will run through some things that we will be using in NodeJS. If you are used to JavaScript, these should be familiar to you. If any of them are not, I recommend finding tutorials explaining them in depth before moving on. Alright, here we go!
 
-#### Anonymous Functions & Function Expressions
+### Anonymous Functions & Function Expressions
 ```
 let myFunc = function() {
     // Do something here
@@ -37,7 +37,7 @@ funcThatNeedsFunc("some text", function(transformedText) {
 }
 ```
 
-#### First Class Functions
+### First Class Functions
 
 ``` 
 let fullNameFunc = function(firstName, lastName) {
@@ -52,7 +52,7 @@ let printName = function (nameToPrint) {
 printName(fullNameFunc('John', 'Smith'));
 ```
 
-#### Arrow Functions
+### Arrow Functions
 
 ```
 let doAddition = (number1, number2) => {
@@ -74,7 +74,7 @@ let Johnny = {
 Johnny.printMyselfFunc();
 Johnny.printMyselfArrFunc();
 ```
-#### Callbacks
+### Callbacks
 ```
 let longRunningCheck = (stringData, cb) => {
     setTimeout((stringData) => {
@@ -98,7 +98,7 @@ longRunningCheck("Johhny is my name", (err, newStringData) => {
 })
 ```
 
-#### Promises
+### Promises
 ```
 let longPromisedCheck = (stringData) => {
     return new Promise((resolve, reject) => {
