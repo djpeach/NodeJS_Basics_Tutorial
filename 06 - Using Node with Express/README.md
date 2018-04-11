@@ -1,5 +1,8 @@
 # Lesson 06 - Using Node with ExpressJS
 
+## Video Tutorial:
+[Lesson 6 - Express with Node.js](https://youtu.be/hBJHJbSKVE0)
+
 ## Setup Express
 
 First we have to create our node project.
