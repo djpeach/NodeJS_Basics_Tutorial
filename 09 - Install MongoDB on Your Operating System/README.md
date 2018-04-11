@@ -1,5 +1,8 @@
 # Lesson 09 - Install MongoDB on Any Operating System
 
+## Video Tutorial:
+[Lesson 9 - Install MongoDB](https://youtu.be/LRxjAMs1OfE)
+
 ## Definition - What is MongoDB Anyway?
 
 > MongoDB is a noSQL document-driven database that scales and queries quickly and easily.
