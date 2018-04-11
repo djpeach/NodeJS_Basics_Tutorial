@@ -1,5 +1,8 @@
 # Lesson 05 - A NodeJS HTTP Server (Part Two)
 
+## Video Tutorial:
+[Lesson 5 - Node.js HTTP Server (Part 2)](https://youtu.be/v98RIQqJYK0)
+
 Previously, we set up and ran our server, but when we sent our first request to the server to load the page, we got stuck loading. To understand why this happens we need to understand the **request - response cycle** that occurs when the user interacts with the server.
 
 ## The Request and Response
