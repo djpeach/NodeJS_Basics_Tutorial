@@ -1,5 +1,8 @@
 # Lesson 07 - Using Express Generator with NodeJS - Part One
 
+## Video Tutorial: 
+[Lesson 7 - Express Generator with Node.js (Part 1)](https://youtu.be/wyQcqXXLses)
+
 ## What is Express-Generator
 
 Express Generator is a command line tool that creates for us a skeleton project with node and express already set up. It also includes some basics routes, and debugging that we would otherwise have to manually set up. So now when creating a project, we will use express-generator instead of manually creating a folder and running `npm init` inside of it. 
