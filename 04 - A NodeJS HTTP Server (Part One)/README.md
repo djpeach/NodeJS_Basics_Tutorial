@@ -1,5 +1,8 @@
 # Lesson 04 - A NodeJS HTTP Server
 
+## Video Tutorial:
+[Lesson 4 - Node.js HTTP Server (Part 1)](https://youtu.be/6SA9NoQlt30)
+
 In this lesson we are going to create your first server. Let's do it.
 
 ## Setup
