@@ -1,5 +1,8 @@
 # Lesson 01 - What is NodeJS?
 
+## Video Tutorial:
+[Lesson 1 - What Is Node.js?](https://youtu.be/OKXxvKCHLgc)
+
 ## Definition
 
 **Acording to _nodejs.org_:**
