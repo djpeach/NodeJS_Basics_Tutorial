@@ -1,5 +1,8 @@
 # Lesson 03 - Working in the NodeJS Enviroment
 
+## Video Tutorial:
+[Lesson 3 - Working in Node.js](https://youtu.be/Cn59tCo35pg)
+
 ## Build our Node Project
 
 Go ahead and create a new folder for this lesson and call it something like _node_programming_. Now do the same as last lesson and go to this folder in terminal and run `npm init --yes`.
