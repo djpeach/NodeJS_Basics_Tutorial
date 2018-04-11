@@ -1,5 +1,8 @@
 # Lesson 08 - Using Express Generator with NodeJS (Part Two)
 
+## Video Tutorial:
+[Lesson 9 - Express Generator with Node.js (Part 2)](https://youtu.be/3Gl5cObnjV8)
+
 ## Run the Server
 
 Now that we have an express app, let's run it in our browser. But first let's create a `devstart` script to give us more help and information as we develop. Go into your *package.json* and add after the existing start script: 
