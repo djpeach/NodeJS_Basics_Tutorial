@@ -1,5 +1,8 @@
 # Lesson 02 - Setting Up & Install Node02
 
+## Video Tutorial: 
+[Lesson 2 - Setup and Install Node.js](https://youtu.be/VxrLRYUWpBM)
+
 ## Download NodeJS
 
 First we need to download NodeJS to our machine. Open a browser and to to https://nodejs.org/en/download/ and download the LTS (Long Term Support) Version for your Operating System, whatever that may be. Now run through the installer, and it will install NodeJS for you, as well as NPM, which is what we will use to get 'add-ons' for our Node Projects.
