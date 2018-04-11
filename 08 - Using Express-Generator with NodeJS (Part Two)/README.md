@@ -1,7 +1,7 @@
 # Lesson 08 - Using Express Generator with NodeJS (Part Two)
 
 ## Video Tutorial:
-[Lesson 9 - Express Generator with Node.js (Part 2)](https://youtu.be/3Gl5cObnjV8)
+[Lesson 8 - Express Generator with Node.js (Part 2)](https://youtu.be/3Gl5cObnjV8)
 
 ## Run the Server
 
