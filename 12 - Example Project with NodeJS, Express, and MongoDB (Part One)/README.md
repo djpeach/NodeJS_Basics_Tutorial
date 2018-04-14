@@ -10,10 +10,10 @@ The app will be a SPA (Single Page Application) called Status Of You. It will be
 
 
 > **First Mini-Challenge!**
-    > * Use Express-Generator to create your app, and call it whatever you like. (Remember to use `--view=pug` to set the view engine)
-    > * Go into the app and install the dependencies, and then install mongoose and nodemon.
-    > * Create the "devstart" script we have used in the past, using nodemon. (in *package.json*)
-    > * Run the app and open it in the browser!
+>   * Use Express-Generator to create your app, and call it whatever you like. (Remember to use `--view=pug` to set the view engine)
+> * Go into the app and install the dependencies, and then install mongoose and nodemon.
+> * Create the "devstart" script we have used in the past, using nodemon. (in *package.json*)
+> * Run the app and open it in the browser!
 
 ## Clean Up Un-needed Code
 
@@ -30,10 +30,10 @@ All Clean Now!
 Remember that with view engines, we can create a layout page, then load in additional blocks to it. So let's create our layout page to have all our CSS and JS in just one file. 
 
 > **Mini-Challenge!**
-    > * Go to http://getbootstrap.com, and go to the 'Get Started' page.
-    > * Copy the CSS cdn link and add it to the head of our *layout.pug* page. (`pug` CAN interpret plain html, but try to turn it into real pug language code like we did before. It is best practice to just stay uniform)
-    > * Copy the JS cdn links and add them to the bottom of the body of our *layout.pug* page.
-    > * Grab the two 'meta' tags from the 'Starter Template' on bootstrap's page and add them to your header as well.
+> * Go to http://getbootstrap.com, and go to the 'Get Started' page.
+> * Copy the CSS cdn link and add it to the head of our *layout.pug* page. (`pug` CAN interpret plain html, but try to turn it into real pug language code like we did before. It is best practice to just stay uniform)
+> * Copy the JS cdn links and add them to the bottom of the body of our *layout.pug* page.
+> * Grab the two 'meta' tags from the 'Starter Template' on bootstrap's page and add them to your header as well.
 
 #### Styling
 
