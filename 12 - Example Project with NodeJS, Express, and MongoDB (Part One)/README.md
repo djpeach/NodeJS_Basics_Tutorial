@@ -8,6 +8,7 @@ The app will be a SPA (Single Page Application) called Status Of You. It will be
 
 ## Generate the App
 
+
 > **First Mini-Challenge!**
     > * Use Express-Generator to create your app, and call it whatever you like. (Remember to use `--view=pug` to set the view engine)
     > * Go into the app and install the dependencies, and then install mongoose and nodemon.
